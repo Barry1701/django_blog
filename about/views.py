@@ -3,7 +3,11 @@ from django.contrib import messages
 from .models import About
 from .forms import CollaborateForm
 
-
+"""
+Renders the most recent information about website author 
+and allows user collaboration request.
+Displays and individual instance of :model: `about.About` .
+"""
 def about_me(request):
         if request.method == "POST":
             collaborate_form = CollaborateForm(data=request.POST)
